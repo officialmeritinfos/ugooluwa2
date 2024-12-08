@@ -524,7 +524,7 @@
                         <div class="service-block_one-icon flaticon-charity"></div>
                         <h5 class="service-block_one-heading">Investment Policy</h5>
                         <div class="service-block_one-text">
-                            At {{$siteName}} is where AI meets Human kmowledge for efficient policies that provide for
+                            At {{$siteName}} is where AI meets Human knowledge for efficient policies that provide for
                             the best result.
                         </div>
                         <div class="service-block_one-overlay" style="background-image:url({{asset('home/images/resource/service.jpg')}})">
@@ -534,7 +534,7 @@
                                     <h5 class="service-block_one-heading-two"><a href="#">Investment Policy</a></h5>
                                 </div>
                                 <div class="service-block_one-text-two">
-                                    At {{$siteName}} is where AI meets Human kmowledge for efficient policies that provide for
+                                    At {{$siteName}} is where AI meets Human knowledge for efficient policies that provide for
                                     the best result.
                                 </div>
                             </div>
@@ -781,11 +781,11 @@
     <!-- End Skill One -->
 
 
-    <!-- News Two -->
+    <!-- News Two
     <section class="news-two">
         <div class="solution-one_circle-layer" style="background-image:url({{asset('home/images/background/pattern-8.png')}})"></div>
         <div class="auto-container">
-            <!-- Sec Title -->
+
             <div class="sec-title-two">
                 <div class="d-flex justify-content-between align-items-center flex-wrap">
                     <div class="left-box">
@@ -801,7 +801,7 @@
 
             <div class="row clearfix">
 
-                <!-- News Block -->
+
                 <div class="news-block-two col-lg-12 col-md-12 col-sm-12">
                     <div class="inner-box">
                         <rssapp-wall id="38kEBNRCi1vuK60z"></rssapp-wall>
@@ -813,7 +813,7 @@
 
             </div>
         </div>
-    </section>
+    </section>-->
     <!-- End News Two -->
 
     <!-- CTA One -->

@@ -42,7 +42,7 @@ class Register extends Controller
             'password'=>['required','string'],
             'referral'=>['nullable','exists:users,username'],
             'phone'=>['nullable'],
-            'g-recaptcha-response' => ['required', new ReCaptcha]
+            'g-recaptcha-response' => ['nullable', new ReCaptcha]
         ]);
         if ($validator->fails()){
             return back()->with('errors',$validator->errors());
