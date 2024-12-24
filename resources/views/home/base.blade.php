@@ -290,10 +290,10 @@
 
                         </div>
                     </div>
-                    <div class="big-column col-lg-3 col-md-12 col-sm-12">
+                    <!--<div class="big-column col-lg-3 col-md-12 col-sm-12">
                         <div class="row clearfix">
 
-                            <!-- Footer Column -->
+
                             <div class="footer-column col-lg-12 col-md-12 col-sm-12">
                                 <div class="footer-widget contact-widget">
                                     <h4>Certificate info:</h4>
@@ -306,7 +306,7 @@
 
 
                         </div>
-                    </div>
+                    </div>-->
 
 
 

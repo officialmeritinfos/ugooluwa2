@@ -472,7 +472,7 @@
                     </div>
                 </div>
 
-                <!-- Service Block One / Style Two -->
+                <!-- Service Block One / Style Two
                 <div class="service-block_one style-two col-lg-4 col-md-6 col-sm-12">
                     <div class="service-block_one-inner">
                         <div class="service-block_one-icon flaticon-market"></div>
@@ -494,7 +494,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
 
                 <!-- Service Block One / Style Two -->
                 <div class="service-block_one style-two col-lg-4 col-md-6 col-sm-12">
@@ -639,65 +639,7 @@
     </div>
 
 
-    <!-- Start Blog Area -->
-    <div class="blog-area pt-100 pb-70" style="margin-bottom: 5rem;">
-        <div class="container">
-            <div class="section-title">
-                <span class="sub-title">Latest Transactions</span>
-                <h2>Most Recent Transactions</h2>
-            </div>
 
-            <div class="row">
-
-                <div class="col-md-6">
-                    <div class="sec-title_title" style="margin-bottom: 3rem;margin-top: 3rem;">Recent Deposits</div>
-                    <table class="table align-middle mb-0 bg-white">
-                        <thead class="bg-light">
-                        <tr>
-                            <th>Name</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($deposits as $deposit)
-                            @inject('option','App\Defaults\Custom')
-                            <tr>
-                                <td>{{$option->getInvestor($deposit->user)}}</td>
-                                <td>${{number_format($deposit->amount,2)}}</td>
-                            </tr>
-                        @endforeach
-
-                        </tbody>
-                    </table>
-
-                </div>
-
-                <div class="col-md-6">
-                    <div class="sec-title_title" style="margin-bottom: 3rem;margin-top: 3rem;">Latest Withdrawals</div>
-                    <table class="table align-middle mb-0 bg-white">
-                        <thead class="bg-light">
-                        <tr>
-                            <th>Name</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($withdrawals as $withdrawal)
-                            @inject('option','App\Defaults\Custom')
-                            <tr>
-                                <td>{{$option->getInvestor($withdrawal->user)}}</td>
-                                <td>${{number_format($withdrawal->amount,2)}}</td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-
-                </div>
-
-            </div>
-        </div>
-        <!-- End News One -->
-    </div>
 
     <!-- Skill One -->
     <section class="skill-one mt-5">
