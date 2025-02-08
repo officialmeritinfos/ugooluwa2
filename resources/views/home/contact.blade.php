@@ -1,50 +1,78 @@
 @extends('home.base')
 @section('content')
-    <section class="page-title" style="background-image:url({{asset('home/images/background/2.jpg')}})">
-        <div class="auto-container">
-            <h2>{{$pageName}}</h2>
-            <ul class="bread-crumb clearfix">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li>{{$pageName}}</li>
-            </ul>
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}}');">
         </div>
-    </section>
-    <!-- End Page Title -->
-
-    <section class="business-one style-five" style="background-image:url({{asset('home/images/background/pattern-39.png')}}')">
-        <div class="auto-container">
-            <!-- Sec Title -->
-
-
-            <!-- Business One Lower Section -->
-            <div class="business-one_lower-section">
-                <h6>Main Branches:</h6>
-                <div class="row clearfix">
-                    <!-- Branch Column -->
-                    <div class="branch-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="branch-column_inner">
-                            <div class="branch-name">Email</div>
-                            <ul class="branch-info_list">
-
-                                <li>{{$web->email}}</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Branch Column -->
-                    <div class="branch-column col-lg-3 col-md-6 col-sm-12">
-                        <div class="branch-column_inner">
-                            <div class="branch-name">Address</div>
-                            <ul class="branch-info_list">
-                                <li>{{$web->address}}</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="page-header__shape-one float-bob-x-2"></div>
+        <div class="page-header__shape-2 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-2.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-3 float-bob-x">
+            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-4 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-4.png')}}" alt="">
+        </div>
+        <div class="container">
+            <div class="page-header__inner text-left">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li>{{$pageName}}</li>
+                </ul>
+                <h2>{{$pageName}}</h2>
             </div>
-
         </div>
     </section>
-    <!-- End Business One -->
+    <!--Page Header End-->
+
+    <!--FAQ Page Start-->
+    <section class="faq-page">
+        <div class="container">
+            <div class="faq-page__top">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- Address Card -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Address</h5>
+                                <p class="card-text">{!! $web->address !!}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if($web->phone)
+                        <!-- Phone Card -->
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h5 class="card-title">Phone</h5>
+                                    <p class="card-text">
+                                        <a href="tel:{{$web->phone}}">Call</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
+                    <!-- Email Card -->
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Email</h5>
+                                <p class="card-text">
+                                    <a href="mailto:{{$web->email}}">{{$web->email}}</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Business One -->
+
+
 
 @endsection

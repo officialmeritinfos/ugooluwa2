@@ -308,17 +308,17 @@
                                 </a>
                                 <ul class="menu-sub">
                                     <li class="menu-item">
-                                        <a href="{{url('account/withdrawals')}}" class="menu-link">
+                                        <a href="{{url('account/profile')}}" class="menu-link">
                                             <i class="menu-icon tf-icons ti ti-user-filled"></i>
                                             <div data-i18n="My Profile">My Profile</div>
                                         </a>
                                     </li>
-{{--                                    <li class="menu-item">--}}
-{{--                                        <a href="{{route('setting.kyc')}}" class="menu-link">--}}
-{{--                                            <i class="menu-icon tf-icons ti ti-user-plus"></i>--}}
-{{--                                            <div data-i18n="KYC">KYC</div>--}}
-{{--                                        </a>--}}
-{{--                                    </li>--}}
+                                    <li class="menu-item">
+                                        <a href="{{route('setting.kyc')}}" class="menu-link">
+                                            <i class="menu-icon tf-icons ti ti-user-plus"></i>
+                                            <div data-i18n="KYC">KYC</div>
+                                        </a>
+                                    </li>
 
                                     <li class="menu-item">
                                         <a href="{{url('account/settings')}}" class="menu-link">
@@ -406,17 +406,7 @@
 </script>
 @stack('js')
 <!-- Smartsupp Live Chat script -->
-<script type="text/javascript">
-    var _smartsupp = _smartsupp || {};
-    _smartsupp.key = 'da10d4a1b7733ef17a5bc4252ebb012ec6ab8fce';
-    window.smartsupp||(function(d) {
-        var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
-        s=d.getElementsByTagName('script')[0];c=d.createElement('script');
-        c.type='text/javascript';c.charset='utf-8';c.async=true;
-        c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
-    })(document);
-</script>
-<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+
 
 </body>
 </html>

@@ -85,9 +85,9 @@ class InvestmentReturn extends Command
                         $update = Investment::where('id',$investment->id)->update($dataInvestment);
                         if ($update){
                             if ($package->withdrawEnd!=1){
-                                $user->profit = $user->profit+$profitToAdd+$investment->amount;
+                                $user->profit = $user->profit+$profitToAdd;
                             }else{
-                                $user->profit = $user->profit+$newProfit+$investment->amount;
+                                $user->profit = $user->profit+$newProfit;
                             }
 
                             $user->save();
@@ -140,6 +140,30 @@ class InvestmentReturn extends Command
                         }
                     }
                 }
+            }
+        }
+        $this->processCapitalReturn();
+    }
+    //process capital return
+    public function processCapitalReturn()
+    {
+        $investments = Investment::where('status',1)->where('capitalReturned','!=',1)->where('timeWithdrawCapital','<',time())->get();
+        if ($investments->count()>0){
+            foreach ($investments as $investment) {
+                $user = User::where('id',$investment->user)->first();
+                $user->profit=$user->profit+$investment->amount;
+                $user->save();
+                $investment->capitalReturned=1;
+                $investment->save();
+
+                //send mail
+                $userMessage = "
+                                Your Investment with reference Id <b>".$investment->reference."</b> has returned
+                                <b>$".$investment->amount."</b> to your account balance which is the capital invested. <br>
+                            ";
+                //send mail to user
+                //SendInvestmentNotification::dispatch();
+                $user->notify(new InvestmentMail($user,$userMessage,'Capital Return'));
             }
         }
     }

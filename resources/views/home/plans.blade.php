@@ -2,6 +2,11 @@
 @section('content')
     @push('css')
         <style>
+
+            small {
+                font-size: 14px;
+                text-transform: initial;
+            }
             .single-price {
                 text-align: center;
                 background: #262626;
@@ -30,7 +35,7 @@
             }
             .deal-top {
                 position: relative;
-                background: rgb(18, 166, 202);
+                background: #005cff;
                 font-size: 16px;
                 text-transform: uppercase;
                 padding: 136px 24px 0;
@@ -42,7 +47,7 @@
                 bottom: -50px;
                 width: 0;
                 height: 0;
-                border-top: 50px solid rgb(18, 166, 202);
+                border-top: 50px solid #005cff;
                 border-left: 175px solid transparent;
                 border-right: 183px solid transparent;
             }
@@ -66,7 +71,7 @@
                 display: inline-block;
                 font-size: 18px;
                 color: #fff;
-                background: rgb(18, 166, 202);
+                background: #005cff;
                 padding: 8px 64px;
                 margin-top: 32px;
                 border-radius: 4px;
@@ -78,7 +83,7 @@
 
 
             .single-price:hover {
-                background: rgb(18, 166, 202);
+                background: #005cff;
             }
             .single-price:hover .deal-top {
                 background: #262626;
@@ -99,7 +104,7 @@
                 left:20px;
                 padding:15px;
                 border-radius:40px;
-                background:rgb(18, 166, 202);
+                background:#005cff;
             }
             .link-area a
             {
@@ -107,29 +112,37 @@
                 color:#fff;
                 font-size:25px;
             }
-            small {
-                font-size: 12px;
-                text-transform: initial;
-            }
         </style>
     @endpush
-    <section class="page-title" style="background-image:url({{asset('home/images/background/2.jpg')}})">
-        <div class="auto-container">
-            <h2>{{$pageName}}</h2>
-            <ul class="bread-crumb clearfix">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li>{{$pageName}}</li>
-            </ul>
+
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}}');">
+        </div>
+        <div class="page-header__shape-one float-bob-x-2"></div>
+        <div class="page-header__shape-2 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-2.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-3 float-bob-x">
+            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-4 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-4.png')}}" alt="">
+        </div>
+        <div class="container">
+            <div class="page-header__inner text-left">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li>{{$pageName}}</li>
+                </ul>
+                <h2>{{$pageName}}</h2>
+            </div>
         </div>
     </section>
-    <!-- End Page Title -->
+    <!--Page Header End-->
 
     <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
         <div class="container">
-            <div class="section-title">
-                <span class="sub-title">Our Packages</span>
-                <h2>Specialized Investment Packages</h2>
-            </div>
             <div class="row justify-content-center">
                 @foreach($packages as $package)
                     @inject('option','App\Defaults\Custom')
@@ -149,8 +162,8 @@
                                             Unlimited
                                         @endif
                                     </li>
-                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                    <li>Contract Duration: {{$package->Duration}}</li>
+                                    <li>Profit: {{$package->roi*$package->numberOfReturns}}%</li>
+                                    <li>Profile/Capital Withdrawal: {{$package->capitalDuration}}</li>
                                     <li>Referral Bonus: {{$package->referral}}% </li>
                                 </ul>
                                 <div class="btn-area">
@@ -164,5 +177,6 @@
             </div>
         </div>
     </div>
+
 
 @endsection

@@ -133,6 +133,7 @@ class Investments extends Controller
         $profitPerReturn = $input['amount']*($roi/100);
         $nextReturn = strtotime($returnType->duration,time());
         $ref =$this->generateId('investments','reference',15);
+        $capitalReturn = strtotime("+{$packageExists->capitalDuration}");
 
         $dataInvestment = [
             'user'=>$user->id,'amount'=>$input['amount'],'roi'=>$roi,'reference'=>$ref,
@@ -140,7 +141,7 @@ class Investments extends Controller
             'nextReturn'=>$nextReturn,'currentReturn'=>0,'returnType'=>$returnType->id,
             'numberOfReturns'=>$packageExists->numberOfReturns,'status'=>$status,'duration'=>$packageExists->Duration,
             'package'=>$packageExists->id,
-            'wallet'=>$coinExists->address,'asset'=>$coinExists->asset
+            'wallet'=>$coinExists->address,'asset'=>$coinExists->asset,'timeWithdrawCapital'=>$capitalReturn
         ];
 
         $investment = Investment::create($dataInvestment);

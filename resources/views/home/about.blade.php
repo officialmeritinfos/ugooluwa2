@@ -1,142 +1,137 @@
 @extends('home.base')
 @section('content')
-
-
-    <section class="page-title" style="background-image:url({{asset('home/images/background/2.jpg')}})">
-        <div class="auto-container">
-            <h2>{{$pageName}}</h2>
-            <ul class="bread-crumb clearfix">
-                <li><a href="{{url('/')}}">Home</a></li>
-                <li>{{$pageName}}</li>
-            </ul>
+    <!--Page Header Start-->
+    <section class="page-header">
+        <div class="page-header__bg" style="background-image: url({{asset('home/images/backgrounds/page-header-bg.jpg')}}');">
         </div>
-    </section>
-    <!-- End Page Title -->
-
-    <section class="about-one style-two" style="background-image:url({{asset('home/images/background/pattern-1.png')}})">
-        <div class="auto-container">
-            <div class="about-one-inner_container">
-                <div class="row clearfix">
-
-                    <!-- Content Column -->
-                    <div class="about-one_content-column col-lg-7 col-md-12 col-sm-12">
-                        <div class="about-one_content-inner">
-                            <!-- Sec Title -->
-                            <div class="sec-title">
-                                <div class="sec-title_title">About us</div>
-                                <h2 class="sec-title_heading">We help to get Solutions!</h2>
-                            </div>
-                            <div class="about-one_colored-text">
-                                <p>
-                                    {{$siteName}} is a cryptocurrency mining and trading investment company aimed at
-                                    providing an accessible way for newcomers and veterans who are willing to get into
-                                    cryptocurrency mining and trading market. We provide a great entry point and oportunity
-                                    for everyone to secure a stake in the cryptocurrency industry.
-                                </p>
-                                <p>
-                                    We are committed to making sure you achieve your investment goals, with our full time
-                                    mining network, professional traders and affiliate system at your disposal. Our logical
-                                    mining investment plans ensures level playing field and sustainable platform for all levels
-                                    of investors including beginners and others who has been in the cryptocurrency industry
-                                    for a long period of time, we’re a highly experienced team with backgrounds including
-                                    brokers, crypto analysts and investment strategists.
-                                </p>
-                            </div>
-                            <div class="about-one_text">
-
-                                <p>
-                                    Our brokers are passionate about cryptocurrency and seek to use their strong
-                                    understanding of the market to deliver the best possible results for our investors. Also,
-                                    {{$siteName}} has been operating in America and Europe since 2015 until it was launched
-                                    globally in 2019, making our investment program available for investors all over the globe.
-                                </p>
-                            </div>
-
-                            <div class="row clearfix">
-
-                                <!-- Progress Info -->
-                                <div class="progress-info col-lg-6 col-md-6 col-sm-12">
-                                    <div class="progress-info_inner">
-                                        <div class="progress-info_title">
-                                            <span class="progress-info_icon flaticon-shield"></span>
-                                            <h6>Risk Free</h6>
-                                        </div>
-                                        <div class="progress-info_text">We offer risk free business for tension free life.</div>
-                                    </div>
-                                </div>
-
-                                <!-- Progress Info -->
-                                <div class="progress-info col-lg-6 col-md-6 col-sm-12">
-                                    <div class="progress-info_inner">
-                                        <div class="progress-info_title">
-                                            <span class="progress-info_icon flaticon-profit"></span>
-                                            <h6>Financial Growth</h6>
-                                        </div>
-                                        <div class="progress-info_text">We ensure the financial growth without conditions.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <!-- Image Column -->
-                    <div class="about-one_image-column col-lg-5 col-md-12 col-sm-12">
-                        <div class="about-one_image-inner">
-                            <div class="about-one_counter-box">
-                                <div class="about-one_counter"><span class="odometer" data-count="7"></span><sup>+</sup></div>
-                                <div class="about-one_experiance">Years of <br> experiences</div>
-                            </div>
-                            <div class="about-one_image">
-                                <img src="{{asset('home/images/resource/about-1.jpg')}}" alt="" />
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="page-header__shape-one float-bob-x-2"></div>
+        <div class="page-header__shape-2 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-2.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-3 float-bob-x">
+            <img src="{{asset('home/images/shapes/page-header-shape-3.png')}}" alt="">
+        </div>
+        <div class="page-header__shape-4 float-bob-y">
+            <img src="{{asset('home/images/shapes/page-header-shape-4.png')}}" alt="">
+        </div>
+        <div class="container">
+            <div class="page-header__inner text-left">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li>{{$pageName}}</li>
+                </ul>
+                <h2>{{$pageName}}</h2>
             </div>
         </div>
     </section>
-    <!-- End About One -->
-
+    <!--Page Header End-->
 
     <!-- Start About Area -->
-    <section class="about-area pb-100" style="margin-top: 5rem;">
-
-        <div class="container mt-5">
-            <div class="row align-items-center">
-                <div class="col-lg-12 row">
-
-                    <div class="single-business col-md-6">
-                        <h3>TRANSPARENCY</h3>
-                        <p>
-                            At {{$siteName}}, we place an emphasis on transparency and responsibility. We clearly
-                            communicate and control all aspects of risk of our investors with the help of our mining
-                            rigs(ASIC) and professional cryptocurrency trader's. We are mindful of the risks involved
-                            in any investment and seek to add value effectively through diversification,
-                        </p>
-                    </div>
-                    <div class="single-business col-md-6">
-                        <h3 class="text-uppercase">high profitability</h3>
-                        <p>
-                            With a wealth of experience in the field of crypto mining and trading , the {{$siteName}}
-                            team focuses on removing all complications involved with investing in cryptocurrency.
-                            The challenges facing beginners in the space are many and varied, we aim to make the
-                            transition into the market seamless and rewarding. We now offer access for those
-                            intending to invest in large quantities of cryptocurrency, attracting investment firms and
-                            institutional operations to the crypto market.
-                        </p>
+    <div class="about-area ptb-100 mt-5">
+        <div class="container">
+            <div class="row m-0">
+                <div class="col-xl-6">
+                    <div class="why-choose-one__left">
+                        <div class="why-choose-one__img-box wow slideInLeft" data-wow-delay="100ms"
+                             data-wow-duration="2500ms">
+                            <div class="why-choose-one__img">
+                                <img src="{{asset('home/images/resources/why-choose-one-1.jpg')}}" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-12 row">
-                    <img src="{{asset('certificate.jpeg')}}" style="width: auto;">
+
+                <div class="col-lg-6 col-md-12 p-0">
+                    <div class="about-text">
+                        <span class="sub-title">ABOUT US</span>
+                        <h2>Your Pathway to Financial Freedom</h2>
+                        <p>
+                           Founded in 2014, we are a global investment agency helping individuals build their financial dreams into reality. From a humble beginning, we have grown to become a notable force in the investment industry with over 40K+ users.
+                        </p>
+                        <p class="about-one__text-2">{{$siteName}} stands as one of the largest and most seasoned international private equity firms. Our accomplished team of investment professionals is primarily dedicated to strategic investments.</p>
+                        <p class="about-one__text-2">
+                            {{$siteName}} is managed by a team of trading experts specializing in generating profits through currency, stocks, options, and commodities trading on the foreign exchange market. We employ a variety of trading techniques to meet client goals.
+                        </p>
+                        <p class="about-one__text-2">
+                            The {{$siteName}} team comprises financial market professionals assembled to provide the best possible trading conditions. Our specialists played a key role in developing technical specifications for a modern platform suitable for both beginners and experienced traders.
+                        </p>
+                        <p class="about-one__text-2">
+                            Throughout our existence, we've aimed to balance lower risk and higher profits for our customers through innovative analysis, information dispersion, and expert assistance. Our team includes experienced professionals with diverse and in-depth knowledge, enhancing the entire investing process.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="single-about-box">
+                                    <div class="icon">
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                    <h3>Consistency</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="single-about-box">
+                                    <div class="icon">
+                                        <i class="ri-settings-2-line"></i>
+                                    </div>
+                                    <h3>Strategy</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-6">
+                                <div class="single-about-box">
+                                    <div class="icon">
+                                        <i class="ri-line-chart-line"></i>
+                                    </div>
+                                    <h3>Investment</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12 p-0">
+                   <img src="{{asset('home/images/minancecert.jpeg')}}" alt="">
                 </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- End About Area -->
 
+    <section class="services-page-v-2">
+        <div class="container">
+            <div class="services-page-v-2__top text-center">
+                <div class="section-title">
+                    <span class="section-title__tagline">Our Services</span>
+                    <h2 class="section-title__title"><span>Financial Solution</span></h2>
+                </div>
+                <p class="section-title__text">
+                    We offer a wide-range of services which allows our users to earn unlimitedly.
+                </p>
+            </div>
+            <div class="row">
+                @foreach($services as $service)
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="services-one__single">
+                            <div class="services-one__img">
+                                <img src="{{asset('home/serv/'.$service->photo)}}" alt="">
+                            </div>
+                            <div class="services-one__content">
+                                <div class="services-one__icon">
+                                    <span class="icon-idea"></span>
+                                </div>
+                                <h3 class="services-one__title"><a href="{{route('service.details',['id'=>$service->id])}}">{{$service->title}}</a></h3>
+                                <p class="services-one__text">
+                                    {{$service->short}}
+                                </p>
+                                <div class="services-one__arrow">
+                                    <a href="{{route('service.details',['id'=>$service->id])}}"><i class="icon-right-arrow-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
+    </section>
 
 
 @endsection
