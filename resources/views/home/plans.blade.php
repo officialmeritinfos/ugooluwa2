@@ -163,7 +163,7 @@
                                         @endif
                                     </li>
                                     <li>Profit: {{$package->roi*$package->numberOfReturns}}%</li>
-                                    <li>Profile/Capital Withdrawal: {{$package->capitalDuration}}</li>
+                                    <li>Profit/Capital Withdrawal: {{$package->capitalDuration}}</li>
                                     <li>Referral Bonus: {{$package->referral}}% </li>
                                 </ul>
                                 <div class="btn-area">
