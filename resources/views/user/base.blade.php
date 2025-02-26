@@ -268,14 +268,14 @@
                                 </a>
                                 <ul class="menu-sub">
                                     <li class="menu-item">
-                                        <a href="{{url('account/withdrawals')}}" class="menu-link">
+                                        <a href="{{url('account/new_withdrawals')}}" class="menu-link">
                                             <i class="menu-icon tf-icons ti ti-files"></i>
                                             <div data-i18n="New Withdrawal">New Withdrawal</div>
                                         </a>
                                     </li>
 
                                     <li class="menu-item">
-                                        <a href="{{url('account/new_withdrawals')}}" class="menu-link">
+                                        <a href="{{url('account/withdrawals')}}" class="menu-link">
                                             <i class="menu-icon tf-icons ti ti-user-circle"></i>
                                             <div data-i18n="Withdrawal History">Withdrawal History</div>
                                         </a>
